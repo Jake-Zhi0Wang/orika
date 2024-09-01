@@ -155,13 +155,12 @@ public class ExpanderTestCase {
             .classMapBuilderFactory(new ScoringClassMapBuilder.Factory())
             .build();
         
-        mapperFactory.classMap(typeOf_FlatData, typeOf_Year)
-        .field("yearNumber", "yearNumber")
+        mapperFactory.classMap(FlatData.class, Year.class).field("yearNumber", "yearNumber")
         .field("yearAnimal", "yearAnimal")
-        .field("months{monthNumber}", "months{monthNumber}")
-        .field("months{monthName}", "months{monthName}")
-        .field("months{days{dayNumber}}", "months{days{dayNumber}}")
-        .field("months{days{dayOfWeek}}", "months{days{dayOfWeek}}").byDefault().register();
+        .field("monthNumber", "months{monthNumber}")
+        .field("monthName", "months{monthName}")
+        .field("dayNumber", "months{days{dayNumber}}")
+        .field("dayOfWeek", "months{days{dayOfWeek}}").byDefault().register();
         
         MapperFacade mapper = mapperFactory.getMapperFacade();
         
