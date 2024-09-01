@@ -160,7 +160,7 @@ public class ExpanderTestCase {
         .field("monthNumber", "months{monthNumber}")
         .field("monthName", "months{monthName}")
         .field("dayNumber", "months{days{dayNumber}}")
-        .field("dayOfWeek", "months{days{dayOfWeek}}").register();
+        .field("dayOfWeek", "months{days{dayOfWeek}}").byDefault().register();
         
         MapperFacade mapper = mapperFactory.getMapperFacade();
         
@@ -193,7 +193,7 @@ public class ExpanderTestCase {
         item2.yearAnimal = "dragon";
         flatData.add(item2);
         
-        List<Year> years = mapper.map(flatData, typeOf_FlatData, typeOf_Year);
+        List<Year> years = mapper.map(flatData, FlatData.class, Year.class);
         System.out.println("Mapped Years:");
         for (Year year : years) {
             System.out.println(year);
