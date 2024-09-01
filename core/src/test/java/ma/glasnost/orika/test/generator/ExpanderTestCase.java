@@ -162,13 +162,13 @@ public class ExpanderTestCase {
         
         List<FlatData> flatData = new ArrayList<>();
         FlatData item = new FlatData();
-        // item.dayNumber = 1;
-        // item.dayOfWeek = "Monday";
-        // item.monthNumber = 10;
-        // item.monthName = "October";
-        // item.yearNumber = 2011;
-        // item.yearAnimal = "monkey";
-        // flatData.add(item);
+        item.dayNumber = 2;
+        item.dayOfWeek = "Tuesday";
+        item.monthNumber = 12;
+        item.monthName = "December";
+        item.yearNumber = 2011;
+        item.yearAnimal = "monkey";
+        flatData.add(item);
         
         item = new FlatData();
         item.dayNumber = 2;
