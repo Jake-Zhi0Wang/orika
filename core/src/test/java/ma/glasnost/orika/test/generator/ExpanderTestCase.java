@@ -163,7 +163,7 @@ public class ExpanderTestCase {
         List<FlatData> flatData = new ArrayList<>();
         FlatData item = new FlatData();
         item.dayNumber = 1;
-        item.dayOfWeek = "Tuesday";
+        item.dayOfWeek = "Monday";
         item.monthNumber = 10;
         item.monthName = "October";
         item.yearNumber = 2011;
@@ -206,7 +206,7 @@ public class ExpanderTestCase {
         Assert.assertEquals(10,m1.monthNumber);
         
         Day m1d1 = m1.days.get(0); 
-        Assert.assertEquals("Tuesday", m1d1.dayOfWeek);
+        Assert.assertEquals("Monday", m1d1.dayOfWeek);
         Assert.assertEquals(1,m1d1.dayNumber);
         
         Month m2 = year.months.get(1);
