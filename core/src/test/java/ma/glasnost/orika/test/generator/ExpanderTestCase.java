@@ -197,7 +197,7 @@ public class ExpanderTestCase {
             System.out.println(d);
         }
         
-        List<Year> years = mapper.map(flatData, typeOf_FlatData, typeOf_Year);
+        List<Year> years = mapper.map(flatData, new TypeBuilder<List<FlatData>>(){}.build(), new TypeBuilder<List<Year>>(){}.build());
         System.out.println("Mapped Years:");
         for (Year year : years) {
             System.out.println(year);
