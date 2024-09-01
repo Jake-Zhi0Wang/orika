@@ -160,7 +160,7 @@ public class ExpanderTestCase {
         .field("monthNumber", "months{monthNumber}")
         .field("monthName", "months{monthName}")
         .field("dayNumber", "months{days{dayNumber}}")
-        .field("dayOfWeek", "months{days{dayOfWeek}}").byDefault().register();
+        .field("dayOfWeek", "months{days{dayOfWeek}}").register();
         
         MapperFacade mapper = mapperFactory.getMapperFacade();
         
