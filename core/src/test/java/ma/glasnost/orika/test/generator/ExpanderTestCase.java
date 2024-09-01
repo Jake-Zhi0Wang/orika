@@ -155,7 +155,7 @@ public class ExpanderTestCase {
             .classMapBuilderFactory(new ScoringClassMapBuilder.Factory())
             .build();
         
-        mapperFactory.classMap(FlatData.class, Year.class).field("yearNumber", "yearNumber")
+        mapperFactory.classMap(typeOf_FlatData, typeOf_Year).field("yearNumber", "yearNumber")
         .field("yearAnimal", "yearAnimal")
         .field("monthNumber", "months{monthNumber}")
         .field("monthName", "months{monthName}")
@@ -193,7 +193,7 @@ public class ExpanderTestCase {
         item2.yearAnimal = "dragon";
         flatData.add(item2);
         
-        List<Year> years = mapper.map(flatData, FlatData.class, Year.class);
+        List<Year> years = mapper.map(flatData, typeOf_FlatData, typeOf_Year);
         System.out.println("Mapped Years:");
         for (Year year : years) {
             System.out.println(year);
