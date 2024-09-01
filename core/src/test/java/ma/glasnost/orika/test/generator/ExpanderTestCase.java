@@ -193,7 +193,7 @@ public class ExpanderTestCase {
         item.yearAnimal = "dragon";
         flatData.add(item2);
         
-        List<Year> years = mapper.mapAsList(flatData, typeOf_FlatData, typeOf_Year);
+        List<Year> years = mapper.map(flatData, typeOf_FlatData, typeOf_Year);
         System.out.println("Mapped Years:");
         for (Year year : years) {
             System.out.println(year);
