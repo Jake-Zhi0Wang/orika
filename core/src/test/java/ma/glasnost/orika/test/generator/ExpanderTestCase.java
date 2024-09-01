@@ -189,7 +189,7 @@ public class ExpanderTestCase {
         flatData.add(item);
         
         List<Year> years = mapper.map(flatData, typeOf_FlatData, typeOf_Year);
-        
+        console.log(years);
         Assert.assertNotNull(years);
         Assert.assertFalse(years.isEmpty());
         Assert.assertEquals(2, years.size());
