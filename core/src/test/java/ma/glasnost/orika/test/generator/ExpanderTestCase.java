@@ -175,25 +175,25 @@ public class ExpanderTestCase {
         item.yearAnimal = "monkey";
         flatData.add(item);
         
-        item = new FlatData();
+        FlatData item1 = new FlatData();
         item.dayNumber = 2;
         item.dayOfWeek = "Tuesday";
         item.monthNumber = 12;
         item.monthName = "December";
         item.yearNumber = 2011;
         item.yearAnimal = "monkey";
-        flatData.add(item);
+        flatData.add(item1);
         
-        item = new FlatData();
+        FlatData item2 = new FlatData();
         item.dayNumber = 2;
         item.dayOfWeek = "Tuesday";
         item.monthNumber = 12;
         item.monthName = "December";
         item.yearNumber = 2012;
         item.yearAnimal = "dragon";
-        flatData.add(item);
+        flatData.add(item2);
         
-        List<Year> years = mapper.map(flatData, typeOf_FlatData, typeOf_Year);
+        List<Year> years = mapper.mapAsList(flatData, typeOf_FlatData, typeOf_Year);
         System.out.println("Mapped Years:");
         for (Year year : years) {
             System.out.println(year);
